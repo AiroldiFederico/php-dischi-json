@@ -19,6 +19,15 @@ body {
 
 
 
-main {
-    color: var(--color-5);
+img {
+    object-fit: contain;
+    aspect-ratio: 1;
+    width: 100%;
 }
+
+.card {
+    
+    height: auto !important;
+    
+}
+

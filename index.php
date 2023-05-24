@@ -47,9 +47,21 @@
 
     <body>
 
-        <div class="col-5 m-auto p-4 d-flex flex-column justify-content-center h-100" id="app">
+        <div class="col-8 m-auto d-flex flex-column justify-content-center align-items-center h-100" id="app">
 
-        
+            <!-- Title -->
+            <h1>JUKEBOX</h1>
+
+            <!-- Dischi -->
+            <div class="bg-light col-12 d-flex flex-wrap p-3 justify-content-between gap-3" id="container">
+
+                <!-- Disco -->
+                <div v-for="(item, index) in data" key="index" class="card col-3">
+                    <img :src="item.poster" alt="">
+
+                </div>
+
+            </div>
 
 
 

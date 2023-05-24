@@ -8,10 +8,9 @@
 
     //manipolazione dati
     $results = $disc_list;
+   
 
 
     //ricreo l'API con i dati manipolati da inviare eventualmente
     header( 'Content-type: application/json');
     echo json_encode( $results );
-
-    

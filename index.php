@@ -53,12 +53,14 @@
             <h1>JUKEBOX</h1>
 
             <!-- Dischi -->
-            <div class="bg-light col-12 d-flex flex-wrap p-3 justify-content-between gap-3" id="container">
+            <div class="bg-light col-12 d-flex flex-wrap p-3 justify-content-between gap-2" id="container">
 
                 <!-- Disco -->
-                <div v-for="(item, index) in data" key="index" class="card col-3">
+                <div v-for="(item, index) in data" key="index" class="card col-3 p-2 text-center">
                     <img :src="item.poster" alt="">
-
+                    <div>{{item.title}}</div>
+                    <div>{{item.author}}</div>
+                    <div>{{item.year}}</div>
                 </div>
 
             </div>

@@ -4,7 +4,7 @@ body {
     font-family: 'Rubik', sans-serif !important; font-weight: bold !important;
     word-spacing: 2px;
     height: 100vh !important;
-    background-color: var(--color-4);
+    background-color: var(--color-5);
 }
 
 /* PALETTE COLORI */
@@ -31,3 +31,7 @@ img {
     
 }
 
+h1 {
+    font-size: 4rem;
+    color: var(--color-4);
+}

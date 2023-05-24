@@ -11,23 +11,33 @@ createApp({
   data() {
     return {
       
-
+      apiUrl: 'server.php',
+      data: '',
+      
 
 
     }
   },
 
-  //chiamata function al caricamento della pagina
-  created(){
-
-
-  },
-
   // FUNZIONI VUE
   methods: {
 
+    chiamataApi(){
+
+      axios.get( this.apiUrl)
+        .then((res) => {
+          this.data = res.data
+        })
+
+    }
 
     
-  }
+  },
+
+  mounted() {
+    this.chiamataApi();
+  },
+
+
 
 }).mount('#app')

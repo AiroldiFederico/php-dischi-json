@@ -13,6 +13,7 @@ createApp({
       
       apiUrl: 'server.php',
       data: '',
+      dettagliodisco: '',
       
 
 
@@ -29,6 +30,20 @@ createApp({
           this.data = res.data
         })
 
+    },
+
+    showcard( index ) {
+
+      //informzazione inviato al server
+      const datoindice = {
+        discoindice: index
+      }
+
+      //chiamata axios
+      axios.post( this.apiUrl, datoindice, {headers: {'Content-Type':'multipart/form-data'}} )
+        .then( (res)=> {
+            this.dettagliodisco = res.data;
+        })
     }
 
     

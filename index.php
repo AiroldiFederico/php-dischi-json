@@ -53,16 +53,36 @@
             <h1>JUKEBOX</h1>
 
             <!-- Dischi -->
-            <div class="bg-light col-12 d-flex flex-wrap pt-3 pb-3 justify-content-evenly gap-2" id="container">
+            <div class=" col-12 d-flex flex-wrap pt-3 pb-3 justify-content-evenly gap-2" id="container">
 
                 <!-- Disco -->
                 <div v-for="(item, index) in data" key="index" class="card col-3 p-2 text-center" @click="showcard(index)">
+                <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <img :src="item.poster" alt="">
-                    <div>{{item.title}}</div>
-                    <div>{{item.author}}</div>
-                    <div>{{item.year}}</div>
+                    <h5>{{item.title}}</h5>
+                    <h5>{{item.author}}</h5>
+                    <h5>{{item.year}}</h5>
+                </a>
                 </div>
 
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-body card text-center">
+                        <img :src="dettagliodisco.poster" alt="">
+                        <h5>{{dettagliodisco.title}}</h5>
+                        <h5>{{dettagliodisco.author}}</h5>
+                        <div class="d-flex justify-content-center gap-3">
+                            <h5>YEAR: {{dettagliodisco.year}}</h5>
+                            <h5>GENERE: {{dettagliodisco.genre}}</h5>
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
 
 
